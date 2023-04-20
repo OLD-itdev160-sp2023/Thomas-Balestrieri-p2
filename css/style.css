@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: azure;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: antiquewhite;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.add-note {
+  height: 40px;
+  width: 40px;
+}
+
+#note-grid {
+  display: flex;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: left;
+  padding: 20px;
+}
+.note-container {
+  background-color: #b9b62a;
+  width: 320px;
+  height: 400px;
+  padding: 5px;
+  position: relative;
+}
+.note-container h2 {
+  text-align: center;
+}
+
+.deleteLogo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+/* Create Modal style */
+
+#modal-backdrop {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#modal-backdrop.visible {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  border: solid 1px #555;
+  background-color: #b9b62a;
+  z-index: 99999;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.visible {
+  display: block;
+}
+
+.modal-content {
+  width: 300px;
+  height: 300px;
+}
+
+#edit-title {
+  width: 300px;
+}
+
+.textAreas {
+  width: 100%;
+  box-sizing: border-box;
+}

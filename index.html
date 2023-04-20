@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Note Taking App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Note Taking App</h1>
+      <div id="add-note-button" class="add-note">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 4.5v15m7.5-7.5h-15"
+          />
+        </svg>
+      </div>
+    </header>
+    <main>
+      <section id="note-grid"></section>
+    </main>
+
+    <div class="modal" id="modal-dialog">
+      <section>
+        <h2>Title</h2>
+        <input type="text" id="create-title-text" />
+        <span id="create-title-message"></span>
+      </section>
+      <section>
+        <h2>Content</h2>
+        <textarea
+          id="create-content-text"
+          cols="80"
+          rows="8"
+          class="textAreas"
+        ></textarea>
+        <span id="create-content-message"></span>
+      </section>
+      <footer>
+        <button id="cancel-button">Cancel</button>
+        <button id="save-button">Save</button>
+      </footer>
+    </div>
+
+    <div id="modal-backdrop"></div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
